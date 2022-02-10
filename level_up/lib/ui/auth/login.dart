@@ -100,7 +100,7 @@ class _LoginState extends State<Login> {
     return Center(
       child: RichText(
         text: TextSpan(
-            text: alreadyHaveAnAccount,
+            text: dontHaveAnAccount,
             style: TextStyle(
                 color: darkGrey.withOpacity(0.9),
                 fontWeight: FontWeight.w400,

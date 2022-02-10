@@ -31,7 +31,7 @@ class HelperWidget {
           height: height,
           decoration: decoration,
           letterSpacing: letterSpacing,
-          overflow: textOverflow),
+         ),
     );
   }
 
@@ -57,7 +57,7 @@ class HelperWidget {
           decoration: decoration,
           fontWeight: FontWeight.w400,
           letterSpacing: letterSpacing,
-          overflow: textOverflow),
+          ),
     );
   }
 

@@ -32,4 +32,6 @@ const String resendOtp = "    RESEND OTP";
 const String smsSent = "SMS has been sent to 7622929829";
 const String changeMobileNumber = "Change Mobile number ?";
 
+//================================================== account created screen strings ================================================================
+const String welcomeAbroad = "Welcome Abroad\n Your account is created.";
 

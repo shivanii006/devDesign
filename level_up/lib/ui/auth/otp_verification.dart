@@ -18,62 +18,63 @@ class OTPVerification extends StatefulWidget {
 class _OTPVerificationState extends State<OTPVerification> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 4), () {});
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GradientBox(
-          padding: const EdgeInsets.symmetric(
-              horizontal: margin_10, vertical: margin_40),
-          child: Center(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: margin_20, vertical: margin_40),
-              margin: const EdgeInsets.symmetric(
-                  horizontal: margin_20, vertical: margin_80),
-              decoration: BoxDecoration(
-                  color: white, borderRadius: BorderRadius.circular(radius_8)),
-              child: Column(
-                children: [
-                  circularIcon(),
-                  Padding(
-                    padding: const EdgeInsets.all(margin_15),
-                    child: HelperWidget().textStyle(
-                        text: sendingOtp,
-                        color: darkGrey,
+      body: SingleChildScrollView(
+        child: GradientBox(
+            padding: const EdgeInsets.symmetric(
+                horizontal: margin_30, vertical: margin_40),
+            child: Center(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal : margin_25 ,vertical: margin_35),
+                decoration: BoxDecoration(
+                    color: white, borderRadius: BorderRadius.circular(radius_8)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    circularIcon(),
+                    Padding(
+                      padding: const EdgeInsets.all(margin_15),
+                      child: HelperWidget().textStyle(
+                          text: sendingOtp,
+                          color: darkGrey,
+                          fontSize: fontSize_16,
+                          textAlign: TextAlign.center,
+                          height: 1.5),
+                    ),
+                    const CustomTextField(
+                        hintText: enterOtp, textAlign: TextAlign.center),
+                    HelperWidget().vGap(gap: margin_15),
+                    submitButton(),
+                    HelperWidget().vGap(gap: margin_10),
+                    notReceivedOtp(),
+                    HelperWidget().vGap(gap: margin_20),
+                    HelperWidget().textStyleMedium(
+                        text: smsSent,
+                        color: black,
                         fontSize: fontSize_16,
                         textAlign: TextAlign.center,
-                        height: 1.5),
-                  ),
-                  const CustomTextField(
-                      hintText: enterOtp, textAlign: TextAlign.center),
-                  HelperWidget().vGap(gap: margin_15),
-                  submitButton(),
-                  HelperWidget().vGap(gap: margin_10),
-                  notReceivedOtp(),
-                  HelperWidget().vGap(gap: margin_20),
-                  HelperWidget().textStyleMedium(
-                      text: smsSent,
-                      color: black,
-                      fontSize: fontSize_16,
+                        height: 2),
+                    HelperWidget().vGap(gap: margin_10),
+                    HelperWidget().textStyle(
+                      text: changeMobileNumber,
+                      color: darkGrey,
+                      fontSize: fontSize_15,
+                      decoration: TextDecoration.underline,
                       textAlign: TextAlign.center,
-                      height: 2),
-                  HelperWidget().vGap(gap: margin_10),
-                  HelperWidget().textStyle(
-                    text: changeMobileNumber,
-                    color: darkGrey,
-                    fontSize: fontSize_15,
-                    decoration: TextDecoration.underline,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width),
+      ),
     );
   }
 

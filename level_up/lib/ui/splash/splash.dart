@@ -6,6 +6,9 @@ import 'package:level_up/constants/colors.dart';
 import 'package:level_up/ui/auth/login.dart';
 import 'package:level_up/widgets/gradient_box.dart';
 
+import '../../widgets/gradient_box.dart';
+import '../auth/login.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
