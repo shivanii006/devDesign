@@ -1,13 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:level_up/ui/auth/account_created.dart';
-import 'package:level_up/ui/auth/login.dart';
-import 'package:level_up/ui/auth/otp_verification.dart';
-import 'package:level_up/ui/auth/signup.dart';
-import 'package:level_up/ui/splash/splash.dart';
-import 'package:level_up/utils/routes/routes.dart';
 
-import 'ui/auth/login.dart';
-import 'utils/routes/routes.dart';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:level_up/ui/profile/profile_screen.dart';
+
+import 'package:level_up/utils/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,9 +19,6 @@ class MyApp extends StatelessWidget {
         title: 'Level Up',
         debugShowCheckedModeBanner: false,
         routes: Routes.routes,
-        home: Login()
-    );
+        home: ProfileScreen());
   }
 }
-
-

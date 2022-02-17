@@ -12,6 +12,8 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
   final TextAlign textAlign;
+  final bool readOnly;
+  final double? iconSize;
 
   const CustomTextField(
       {Key? key,
@@ -21,7 +23,7 @@ class CustomTextField extends StatelessWidget {
       this.controller,
       this.obscureText = false,
       this.keyboardType,
-      this.textInputAction, this.textAlign  = TextAlign.start})
+      this.textInputAction, this.textAlign  = TextAlign.start, this.readOnly = false, this.iconSize})
       : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class CustomTextField extends StatelessWidget {
       textInputAction: textInputAction,
       textAlign: textAlign,
       cursorColor: blue,
+      readOnly: readOnly,
       decoration: InputDecoration(
           hintText: hintText,
           labelStyle: TextStyle(color: darkGrey, fontWeight: FontWeight.w400),
@@ -53,6 +56,7 @@ class CustomTextField extends StatelessWidget {
           suffixIcon: Icon(
             suffixIcon,
             color: grey,
+            size: iconSize,
           )),
     );
   }

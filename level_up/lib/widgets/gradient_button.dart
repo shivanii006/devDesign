@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:level_up/constants/colors.dart';
+import 'package:level_up/constants/dimensions.dart';
 
 class GradientButton extends StatelessWidget {
   final double? width;
@@ -18,7 +19,7 @@ class GradientButton extends StatelessWidget {
       onPressed: onPressed,
       child: Ink(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40.0),
+          borderRadius: BorderRadius.circular(radius_30),
           gradient: LinearGradient(
               colors: [blue, red],
               end: Alignment.centerRight,
@@ -26,11 +27,11 @@ class GradientButton extends StatelessWidget {
               stops: const [0.3, 0.9]),
         ),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+          padding: const EdgeInsets.symmetric(horizontal: margin_30, vertical: margin_12),
           width: width,
           constraints: const BoxConstraints(minWidth: 110.0),
           child: Text(text,
-              style: TextStyle(color: white, fontSize: 17),
+              style: TextStyle(color: white, fontSize: fontSize_17),
               textAlign: TextAlign.center),
         ),
       ),

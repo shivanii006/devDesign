@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:level_up/constants/colors.dart';
-import 'package:level_up/constants/strings.dart';
+import 'package:level_up/constants/dimensions.dart';
+
 
 import '../helper_widget.dart';
 
@@ -21,21 +22,21 @@ class CustomOutlinedButton extends StatelessWidget {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(radius_30),
         ),
         side: BorderSide(width: 2, color: grey),
       ),
       onPressed: onPressed,
       child : Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: margin_30),
         width: width,
         constraints: const BoxConstraints(minWidth: 110.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             icon,
-            HelperWidget().hGap(gap: 4),
-            HelperWidget().textStyleMedium(text: text, color: darkGrey, fontSize: 16),
+            HelperWidget().hGap(gap: margin_4),
+            HelperWidget().textStyleMedium(text: text, color: darkGrey, fontSize: fontSize_16),
           ],
         ),
       ),

@@ -14,7 +14,7 @@ class ElevatedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      margin: EdgeInsets.symmetric(horizontal: margin_20, vertical: margin_8),
       child: ElevatedButton(
         child: ListTile(
           leading: Icon(
@@ -23,7 +23,7 @@ class ElevatedCard extends StatelessWidget {
           ),
           title: Text(
             title,
-            style: TextStyle(fontSize: 18, color: black),
+            style: TextStyle(fontSize: fontSize_18, color: black),
           ),
           trailing: Icon(
             suffixIcon,
@@ -38,7 +38,7 @@ class ElevatedCard extends StatelessWidget {
           primary: white,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius_30)),
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 2),
+          padding: EdgeInsets.symmetric(horizontal: margin_20, vertical: margin_4),
         ),
       ),
     );
